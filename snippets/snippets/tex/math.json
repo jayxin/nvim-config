@@ -1,0 +1,58 @@
+{
+  "FF": {
+    "prefix": "ff",
+    "body": [
+      "\\frac{$1}{$2}$0"
+    ],
+    "description": "The LaTeX \\frac{}{} command"
+  },
+  "SB": {
+    "prefix": "sb",
+    "body": [
+      "_{$1}$0"
+    ],
+    "description": "subscript"
+  },
+  "SP": {
+    "prefix": "sp",
+    "body": [
+      "^{$1}$0"
+    ],
+    "description": "superscript"
+  },
+  "SUM": {
+    "prefix": "sum",
+    "body": [
+      "\\sum_{$1}^{$2}$0"
+    ],
+    "description": "summation"
+  },
+  "SET": {
+    "prefix": "set",
+    "body": [
+      "\\{$1\\} $0"
+    ],
+    "description": "set"
+  },
+  "LDOTS": {
+    "prefix": "...",
+    "body": [
+      "\ldots"
+    ],
+    "description": "ldots"
+  },
+  "IFF": {
+    "prefix": "iff",
+    "body": [
+      "\\iff"
+    ],
+    "description": "iff"
+  },
+  "SUBSET": {
+    "prefix": "cc",
+    "body": [
+      "\\subset"
+    ],
+    "description": "SUBSET"
+  }
+}

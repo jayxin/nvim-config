@@ -1,0 +1,58 @@
+{
+	"HR": {
+		"prefix": "hr",
+		"body": [
+      "\\href{${1:url}}{${2:display name}}${0}"
+		],
+		"description": "href"
+	},
+	"EM": {
+		"prefix": "em",
+		"body": [
+      "\\emph{$1}$0"
+		],
+		"description": "emphasized"
+	},
+	"BF": {
+		"prefix": "bf",
+		"body": [
+      "\\textbf{$1}$0"
+		],
+		"description": "boldface"
+	},
+	"TII": {
+		"prefix": "tii",
+		"body": [
+      "\\textit{$1}$0"
+		],
+		"description": "The \\textit{} command for italic font"
+	},
+	"BS": {
+		"prefix": "bs",
+		"body": [
+      "\\textbackslash"
+		],
+		"description": "backslash"
+	},
+	"DD": {
+		"prefix": "dd",
+		"body": [
+      "{$1}$0"
+		],
+		"description": "brackets"
+	},
+	"TT": {
+		"prefix": "tt",
+		"body": [
+      "\\texttt{$1}$0"
+		],
+		"description": "The \\texttt{} command for typewriter-style font"
+	},
+	"DATE": {
+		"prefix": "today",
+		"body": [
+      "`date +%F`"
+		],
+		"description": "bold font"
+	}
+}

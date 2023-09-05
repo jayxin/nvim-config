@@ -1,0 +1,5 @@
+vim.keymap.set('n', '<F6>', function ()
+  vim.cmd('w')
+  vim.cmd('!g++ -D RE_IO % -o %<')
+  vim.cmd('! ./%<')
+end, { noremap = true, silent = true })
