@@ -23,18 +23,18 @@ function M.config()
     show_help = true,
   })
 
-  _.register({
-        --['<Leader>f'] = { name = '+file' },
-        ['<Leader>fb'] = { '<Cmd>Telescope buffers<cr>', 'Find Buffers' },
-        ['<Leader>ff'] = { '<Cmd>Telescope find_files<cr>', 'Find Files' },
-        ['<Leader>fg'] = { '<Cmd>Telescope git_files<cr>', 'Git Files' },
-        ['<leader>fj'] = { '<Cmd>Telescope jumplist<cr>', 'Jump List' },
-        ['<leader>fl'] = { '<Cmd>Telescope live_grep<cr>', 'Live Grep' },
-        ['<leader>fm'] = { '<Cmd>Telescope marks<cr>', 'Find Marks' },
-        ['<Leader>fr'] = { '<Cmd>Telescope oldfiles<cr>', 'Open Recent File' },
-        ['<leader>fs'] = { '<Cmd>Telescope grep_string<cr>', 'Grep String' },
-        ['<leader>ft'] = { '<Cmd>NvimTreeToggle<cr>', 'File Tree' },
-  })
+  --_.register({
+        ----['<Leader>f'] = { name = '+file' },
+        --['<Leader>fb'] = { '<Cmd>Telescope buffers<cr>', 'Find Buffers' },
+        --['<Leader>ff'] = { '<Cmd>Telescope find_files<cr>', 'Find Files' },
+        --['<Leader>fg'] = { '<Cmd>Telescope git_files<cr>', 'Git Files' },
+        --['<leader>fj'] = { '<Cmd>Telescope jumplist<cr>', 'Jump List' },
+        --['<leader>fl'] = { '<Cmd>Telescope live_grep<cr>', 'Live Grep' },
+        --['<leader>fm'] = { '<Cmd>Telescope marks<cr>', 'Find Marks' },
+        --['<Leader>fr'] = { '<Cmd>Telescope oldfiles<cr>', 'Open Recent File' },
+        --['<leader>fs'] = { '<Cmd>Telescope grep_string<cr>', 'Grep String' },
+        --['<leader>ft'] = { '<Cmd>NvimTreeToggle<cr>', 'File Tree' },
+  --})
 end
 
 return M

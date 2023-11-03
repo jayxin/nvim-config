@@ -9,7 +9,7 @@
   "SB": {
     "prefix": "sb",
     "body": [
-      "_{$1}$0"
+      "$1_{$2}$0"
     ],
     "description": "subscript"
   },
@@ -37,7 +37,7 @@
   "LDOTS": {
     "prefix": "...",
     "body": [
-      "\ldots"
+      "\\ldots"
     ],
     "description": "ldots"
   },
@@ -54,5 +54,145 @@
       "\\subset"
     ],
     "description": "SUBSET"
-  }
+  },
+  "DIAMOND": {
+    "prefix": "<>",
+    "body": [
+      "\\diamond"
+    ],
+    "description": "hokje"
+  },
+  "leftrightarrow": {
+    "prefix": "<->",
+    "body": [
+      "\\leftrightarrow"
+    ],
+    "description": "leftrightarrow"
+  },
+  "mapsto": {
+    "prefix": "!>",
+    "body": [
+      "\\mapsto"
+    ],
+    "description": "Maps to"
+  },
+  "triangleleft": {
+    "prefix": "<!",
+    "body": [
+      "\\triangleleft"
+    ],
+    "description": "Triangle Left"
+  },
+  "ZZ": {
+    "prefix": "ZZ",
+    "body": [
+      "\\Z"
+    ],
+    "description": "Z"
+  },
+  "QQ": {
+    "prefix": "Q",
+    "body": [
+      "\\Q"
+    ],
+    "description": "Q"
+  },
+  "RR": {
+    "prefix": "RR",
+    "body": [
+      "\\R"
+    ],
+    "description": "Real"
+  },
+  "OO": {
+    "prefix": "OO",
+    "body": [
+      "\\O"
+    ],
+    "description": "Empty set"
+  },
+  "NN": {
+    "prefix": "NN",
+    "body": [
+      "\\N"
+    ],
+    "description": "Natural"
+  },
+  "nnn": {
+    "prefix": "nnn",
+    "body": [
+      "\\bigcap_{${1:i \\in ${2: I}}} $0"
+    ],
+    "description": "bigcap"
+  },
+  "uuu": {
+    "prefix": "uuu",
+    "body": [
+      "\\bigcup_{${1:i \\in ${2: I}}} $0"
+    ],
+    "description": "bigcup"
+  },
+  "UU": {
+    "prefix": "UU",
+    "body": [
+      "\\cup"
+    ],
+    "description": "cup"
+  },
+  "Nn": {
+    "prefix": "Nn",
+    "body": [
+      "\\cap"
+    ],
+    "description": "cap"
+  },
+  "inn": {
+    "prefix": "inn",
+    "body": [
+      "\\in"
+    ],
+    "description": "in"
+  },
+  "notin": {
+    "prefix": "notin",
+    "body": [
+      "\\not\\in"
+    ],
+    "description": "not in"
+  },
+  "mid": {
+    "prefix": "||",
+    "body": [
+      "\\mid"
+    ],
+    "description": "mid"
+  },
+  "sim": {
+    "prefix": "sm",
+    "body": [
+      "\\sim"
+    ],
+    "description": "~"
+  },
+  "<<": {
+    "prefix": "<<",
+    "body": [
+      "\\ll"
+    ],
+    "description": "<<"
+  },
+  ">>": {
+    "prefix": ">>",
+    "body": [
+      "\\gg"
+    ],
+    "description": ">>"
+  },
+  "compl": {
+    "prefix": "compl",
+    "body": [
+      "^{c}$0"
+    ],
+    "description": "complement"
+  },
 }

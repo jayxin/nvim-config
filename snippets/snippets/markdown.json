@@ -157,5 +157,12 @@
 			"|   |   | | "
 		],
 		"description": "Insert a simple table"
-	}
+	},
+  "TODO": {
+    "prefix": "tod",
+    "body": [
+      "[ ] $0"
+    ],
+    "description": "Todo"
+  }
 }

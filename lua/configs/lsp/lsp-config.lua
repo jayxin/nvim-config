@@ -70,6 +70,7 @@ function M.config()
     --"rome",
     --"texlab",
     --"jdtls",
+    "vuels",
   }
 
   for _, lsp in pairs(servers) do

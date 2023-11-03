@@ -1,7 +1,7 @@
 local M = {}
 
 function M.config()
-  local opts = { noremap = true, silent = true }
+  local keymap = require("utils.keymap").map
 
   -- if do not work in .md file,
   -- please do `:call mkdp#util#install()`
@@ -62,8 +62,8 @@ function M.config()
   --vim.keymap.set('n', '<Leader>mp', ':MarkdownPreview<Cr>', opts)
   --vim.keymap.set('n', '<Leader>me', ':MarkdownPreviewStop<Cr>', opts)
 
-  vim.keymap.set('n', '<Leader>mp', ':call mkdp#rpc#start_server()<Cr>', opts)
-  vim.keymap.set('n', '<Leader>me', ':call mkdp#rpc#stop_server()<Cr>', opts)
+  keymap('n', '<Leader>mp', ':call mkdp#rpc#start_server()<Cr>', ".md Preview")
+  keymap('n', '<Leader>me', ':call mkdp#rpc#stop_server()<Cr>', ".md Previw Stop")
 end
 
 return M

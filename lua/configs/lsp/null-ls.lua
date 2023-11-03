@@ -16,6 +16,11 @@ function M.config()
 	local sources = {
 		formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
 		--formatting.black.with({ extra_args = { "--fast" } }),
+    formatting.black.with({
+      extra_args = {
+        "-l 80"
+      }
+    }),
 		formatting.goimports,
 		formatting.gofumpt,
 		diagnostics.golangci_lint,
@@ -23,8 +28,8 @@ function M.config()
 		--formatting.stylua,
 
 		-- python
-		--formatting.black,
-		formatting.isort,
+    --formatting.black,
+		--formatting.isort,
 		diagnostics.flake8,
 		--diagnostics.pylint,
 

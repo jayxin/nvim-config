@@ -118,23 +118,23 @@ M.config = function()
 		},
 	})
 
-	local opts = { noremap = true, silent = true }
+	local keymap = require("utils.keymap").map
 	local l = "<Leader>"
 	local builtin = require("telescope.builtin")
 	local theme = require("telescope.themes")
-	vim.keymap.set("n", l .. "fb", builtin.buffers, opts)
-	vim.keymap.set("n", l .. "ff", builtin.find_files, opts)
-	vim.keymap.set("n", l .. "fF", ":Telescope find_files cwd=", opts)
-	vim.keymap.set("n", l .. "fj", builtin.jumplist, opts)
-	vim.keymap.set("n", l .. "fg", builtin.git_files, opts)
-	vim.keymap.set("n", l .. "fm", builtin.marks, opts)
-	vim.keymap.set("n", l .. "fr", builtin.oldfiles, opts)
-	vim.keymap.set("n", l .. "fl", "<Cmd>Telescope live_grep<Cr>", opts)
-	vim.keymap.set("n", l .. "fs", function()
-		_.grep_string({
-			search = vim.fn.input("Grep > "),
-		})
-	end, opts)
+	keymap("n", l .. "fb", builtin.buffers, "Find Buffers")
+	keymap("n", l .. "ff", builtin.find_files, "Find Files")
+	keymap("n", l .. "fF", ":Telescope find_files cwd=", "Find Files in:")
+	keymap("n", l .. "fj", builtin.jumplist, "Find Jumplist")
+	keymap("n", l .. "fg", builtin.git_files, "Find Git files")
+	keymap("n", l .. "fm", builtin.marks, "Find Marks")
+	keymap("n", l .. "fr", builtin.oldfiles, "Find Recent files")
+	keymap("n", l .. "fl", "<Cmd>Telescope live_grep<Cr>", "Live Grep")
+  keymap("n", l .. "fh", builtin.help_tags, "Find Help tags")
+  keymap("n", l .. "fc", builtin.command_history, "Find Command history")
+  keymap("n", l .. "fs", builtin.search_history, "Find Search history")
+  keymap("n", l .. "fa", ":Telescope aerial<cr>", "Find Aerial")
+  keymap("n", l .. "fy", ":Telescope yank_history<cr>", "Find Yank history")
 
 	-- add fzf_native plugin
 	--telescope.load_extension("fzf")
@@ -146,21 +146,6 @@ M.config = function()
 		builtin.current_buffer_fuzzy_find(opt)
 	end
 
-	-- or create a user command and use it to save vim session
-	vim.api.nvim_create_user_command("SessionSv", function()
-		vim.api.nvim_cmd(vim.api.nvim_parse_cmd("Telescope xray23 save", {}), {})
-	end, { desc = "load user session,like workspace" })
-
-	--vim.keymap.set("n", "<leader>fF", ":Telescope find_files cwd=")
-	--vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
-	--vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
-	--vim.keymap.set("n", "<leader>fc", builtin.command_history, {})
-	--vim.keymap.set("n", "<leader>fs", builtin.search_history, {})
-	--vim.keymap.set("n", "<leader>fn", ":Noice telescope<cr>")
-	--vim.keymap.set("n", "<leader>fv", ":Telescope aerial<cr>")
-	--vim.keymap.set("n", "<leader>fSs", ":SessionSv<cr>")
-	--vim.keymap.set("n", "<leader>fy", ":Telescope yank_history<cr>")
-	--vim.keymap.set("n", "<leader>flc", ":Telescope bibtex<cr>")
 	--vim.keymap.set(
 	--"n",
 	--"<C-_>", -- <C-_> means <C-/> for some historical reason
@@ -173,11 +158,4 @@ end
 
 return M
 
--- :Telescope find_files
--- :Telescope live_grep
--- :Telescope buffers
--- :Telescope grep_string
--- :Telescope oldfiles
--- :Telescope marks
--- :Telescope jumplist
 -- apt-get install ripgrep

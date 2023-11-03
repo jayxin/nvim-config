@@ -126,7 +126,7 @@ function M.config()
 			["<C-u>"] = cmp.mapping.scroll_docs(-4),
 			["<C-d>"] = cmp.mapping.scroll_docs(4),
 
-			[",a"] = cmp.mapping.abort(),
+			["<C-e>"] = cmp.mapping.abort(),
 			["<C-y>"] = cmp.mapping.confirm({ select = true }),
 			--['<CR>'] = cmp.mapping.confirm({
 			--behavior = cmp.ConfirmBehavior.Replace,

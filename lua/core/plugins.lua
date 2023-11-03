@@ -213,7 +213,7 @@ return _.setup({
   {
     "ray-x/lsp_signature.nvim",
     config = function()
-      require("configs.lsp.lsp_signature").config()
+      --require("configs.lsp.lsp_signature").config()
     end,
   },
 
@@ -227,7 +227,12 @@ return _.setup({
   },
 
   -- languages
-  { "mfussenegger/nvim-dap" },
+  {
+    "mfussenegger/nvim-dap",
+    config = function()
+      require("configs.dap").config()
+    end,
+  },
   { "theHamsta/nvim-dap-virtual-text" },
   { "rcarriga/nvim-dap-ui" },
   -- golang

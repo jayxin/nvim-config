@@ -33,15 +33,15 @@
       },
       {
         "language": "tex",
-        "path": "./snippets/tex/math.json"
-      },
-      {
-        "language": "tex",
         "path": "./snippets/tex/env.json"
       },
       {
+        "language": "tex",
+        "path": "./snippets/tex/math.json"
+      },
+      {
         "language": "json",
-        "path": "/./snippets/json.json"
+        "path": "./snippets/json.json"
       }
     ]
   }
