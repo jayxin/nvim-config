@@ -80,4 +80,13 @@ acmd({ "InsertEnter" }, {
 	command = "setlocal formatoptions+=t formatoptions-=l",
 })
 
+acmd("BufEnter", {
+	pattern = "*",
+  callback = function ()
+    vim.o.laststatus = 2
+    vim.o.statusline = "%f%m%r %=L:%l/%L %c %p%% " .. vim.opt.fileformat._value .. " " .. vim.o.encoding .. "|%y"
+    vim.o.winbar = "%f"
+  end
+})
+
 -- vim: foldmarker={{,}} fdm=marker

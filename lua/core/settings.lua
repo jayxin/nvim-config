@@ -74,9 +74,9 @@ vim.o.ttimeoutlen = 100
 
 vim.o.history = 500
 
-vim.o.laststatus = 2
-vim.o.statusline = "%f%m%r %=L:%l/%L %c %p%% " .. vim.o.fileformat .. " " .. vim.o.encoding .. "|%y"
-vim.o.winbar = "%f"
+--vim.o.laststatus = 2
+--vim.o.statusline = "%f%m%r %=L:%l/%L %c %p%% " .. vim.opt.fileformat._value .. " " .. vim.o.encoding .. "|%y"
+--vim.o.winbar = "%f"
 
 vim.g.border_style = "rounded"
 --vim.opt.showtabline = 2 -- always show tabs
@@ -92,5 +92,12 @@ vim.opt.synmaxcol = 300 -- stop syntax highlight after x lines for performance
 
 vim.opt.list = false
 vim.opt.eol = false -- show if there's no eol char
+
+if vim.fn.has('nvim') then
+  vim.cmd([[
+    highlight! link TermCursor Cursor
+    highlight! TermCursorNC guibg=red guifg=white ctermbg=1 ctermfg=15
+  ]])
+end
 
 -- vim: foldmarker={{,}} fdm=marker
