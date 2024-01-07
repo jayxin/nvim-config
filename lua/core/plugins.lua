@@ -300,7 +300,7 @@ return _.setup({
     config = function()
       require("configs.vimtex").config()
     end,
-    ft = "tex",
+    --ft = { "tex" },
   },
   --{ 'KeitaNakamura/tex-conceal.vim' }
   {

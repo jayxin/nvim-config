@@ -164,5 +164,18 @@
       "[ ] $0"
     ],
     "description": "Todo"
+  },
+  "cb": {
+    "prefix": "cb",
+    "body": [
+      "<details>",
+      "<summary>Show Code</summary>",
+      "",
+			"```${1:lang}",
+			"${2:code}",
+			"```",
+      "</details>${0}"
+    ],
+    "description": "cb"
   }
 }

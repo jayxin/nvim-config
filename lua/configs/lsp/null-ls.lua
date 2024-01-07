@@ -33,6 +33,8 @@ function M.config()
 		diagnostics.flake8,
 		--diagnostics.pylint,
 
+    formatting.xmlformat,
+
 		-- sh
 		formatting.shfmt.with({
 			extra_args = { "-i", "2", "-bn", "-ci", "-sr" },

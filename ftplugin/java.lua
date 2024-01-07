@@ -1,6 +1,6 @@
 local home = vim.loop.os_homedir()
 local jdtls_root_dir = home .. "/.local/share/nvim/mason/packages/jdtls"
-local javacmd = "/usr/lib/jvm/java-17-openjdk/bin/java"
+local javacmd = "/usr/lib/jvm/java-17-openjdk-amd64/bin/java"
 
 local jdtls = require("jdtls")
 
@@ -19,7 +19,7 @@ local get_runtime_dir = function ()
   local runtimes = {
     {
       name = "JavaSE-17",
-      path = "/usr/lib/jvm/java-17-openjdk",
+      path = "/usr/lib/jvm/java-17-openjdk-amd64",
     },
     --{
     --name = "JavaSE-11",
