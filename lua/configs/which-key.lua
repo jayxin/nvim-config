@@ -6,18 +6,18 @@ function M.config()
 
   _.setup({
     plugins = {
-      marks = true,
-      registers = true,
-      presets = {
-        operators = false,
-        motions = false,
+      marks     = true,
+      registers = false,
+      presets   = {
+        operators    = false,
+        motions      = false,
         text_objects = false,
-        windows = true,
-        nav = true,
-        z = true,
-        g = true,
+        windows      = true,
+        nav          = true,
+        z            = true,
+        g            = true,
       },
-      spelling = { enabled = true, suggestions = 20 },
+      spelling  = { enabled = true, suggestions = 20 },
     },
     hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ " },
     show_help = true,

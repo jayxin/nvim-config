@@ -36,9 +36,11 @@ M.config = function()
       "yaml",
       "regex",
     },
-    sync_install = false,
-    auto_install = true,
+
+    sync_install       = false,
+    auto_install       = true,
     parser_install_dir = parser_path,
+
     highlight = {
       enable = true,
       --disable = {},
@@ -51,15 +53,17 @@ M.config = function()
       --end,
       additional_vim_regex_highlighting = false,
     },
+
     incremental_selection = {
-      enable = true,
+      enable  = true,
       keymaps = {
-        init_selection = "<Cr>",
-        node_incremental = "<Cr>",
-        node_decremental = "<Bs>",
+        init_selection    = "<Cr>",
+        node_incremental  = "<Cr>",
+        node_decremental  = "<Bs>",
         scope_incremental = "<Tab>",
       },
     },
+
     indent = {
       enable = true,
     },
@@ -91,8 +95,8 @@ M.config = function()
   })
 
   vim.wo.foldmethod = "expr"
-  vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
-  vim.wo.foldlevel = 99
+  vim.wo.foldexpr   = "nvim_treesitter#foldexpr()"
+  vim.wo.foldlevel  = 99
 end
 
 return M

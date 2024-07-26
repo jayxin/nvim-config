@@ -272,7 +272,7 @@ return _.setup({
   -- Markdown {{{
   {
     "godlygeek/tabular",
-    ft = { "markdown" },
+    --ft = { "markdown" },
   },
   {
     "preservim/vim-markdown",
@@ -399,5 +399,9 @@ return _.setup({
       require("configs.which-key").config()
     end,
   },
+
+  {
+    "godlygeek/tabular",
+  }
 })
 -- vim: foldmarker={{{,}}} fdm=marker
