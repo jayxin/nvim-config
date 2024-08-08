@@ -402,6 +402,13 @@ return _.setup({
 
   {
     "godlygeek/tabular",
+  },
+
+  {
+    "preservim/tagbar",
+    config = function()
+      require("configs.tagbar").config()
+    end,
   }
 })
 -- vim: foldmarker={{{,}}} fdm=marker
