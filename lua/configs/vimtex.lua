@@ -94,7 +94,7 @@ function M.config()
             \   '-shell-escape',
             \   '-file-line-error',
             \   '-synctex=1',
-            \   '-interaction=nonstopmode',
+            \   '-interaction=batchmode',
             \   '-xelatex',
             \   '-halt-on-error'
             \ ],
@@ -116,7 +116,8 @@ function M.config()
       let g:vimtex_fold_enabled = 1
 
       noremap <localleader>c <Cmd>update<CR><Cmd>VimtexCompileSS<CR>
-      noremap <leader>v <Plug>(vimtex-view)
+      "noremap <leader>v <Plug>(vimtex-view)
+      noremap <silent> <leader>v <Cmd>VimtexView<CR>
     ]])
 end
 
